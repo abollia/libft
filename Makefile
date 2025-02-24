@@ -1,42 +1,96 @@
-NAME	= libft.a
+#--------------------------\\\\\___VARIABLES___/////---------------------------#
 
-SRC	= ${LIBC} ${SUPP}
+MAKEFLAGS	+= --no-print-directory
 
-LIBC	= ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_strlen.c ft_memset.c \
-ft_bzero.c ft_memcpy.c ft_memmove.c ft_strlcpy.c ft_strlcat.c ft_toupper.c ft_tolower.c ft_strchr.c \
-ft_strrchr.c ft_strncmp.c ft_memchr.c ft_memcmp.c ft_strnstr.c ft_atoi.c ft_calloc.c ft_strdup.c
+NAME		=	libft.a
 
-SUPP	= ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c \
-ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
+CC			=	cc
+FLAGS		=	-Wall -Wextra -Werror -g3
 
-BONUS	= ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c ft_lstlast_bonus.c \
-ft_lstadd_back_bonus.c ft_lstdelone_bonus.c ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c
+#---------------------------\\\\\___SOURCES___/////----------------------------#
 
-OBJ	= ${SRC:.c=.o}
+SRC			=	${IS} ${MEM} ${FD} ${LST} ${STR_OPS} ${TO} ${PRINTF} ${GNL}
 
-OBJ_BONUS = ${BONUS:.c=.o}
+IS			=	./is/ft_isalpha.c \
+				./is/ft_isdigit.c \
+				./is/ft_isalnum.c \
+				./is/ft_isascii.c \
+				./is/ft_isprint.c 
 
-CC		= gcc
+TO			=	./to/ft_toupper.c \
+				./to/ft_tolower.c \
+				./to/ft_atoi.c \
+				./to/ft_atol.c \
+				./to/ft_itoa.c 
 
-FLAGS	= -Wall -Werror -Wextra
+MEM			=	./mem/ft_calloc.c \
+				./mem/ft_ffa.c \
+				./mem/ft_memchr.c \
+				./mem/ft_memcmp.c \
+				./mem/ft_memcpy.c \
+				./mem/ft_memmove.c \
+				./mem/ft_memset.c \
+				./mem/ft_bzero.c 
 
-all:		${NAME}
+FD			=	./fd/ft_putchar_fd.c \
+				./fd/ft_putstr_fd.c \
+				./fd/ft_putendl_fd.c \
+				./fd/ft_putnbr_fd.c
+
+LST			=	./lst/ft_lstnew.c \
+				./lst/ft_lstadd_front.c \
+				./lst/ft_lstsize.c \
+				./lst/ft_lstlast.c \
+				./lst/ft_lstadd_back.c \
+				./lst/ft_lstdelone.c \
+				./lst/ft_lstclear.c \
+				./lst/ft_lstiter.c \
+				./lst/ft_lstmap.c
+
+STR_OPS		=	./str_ops/ft_strlen.c \
+				./str_ops/ft_strlcpy.c \
+				./str_ops/ft_strlcat.c \
+				./str_ops/ft_strchr.c \
+				./str_ops/ft_strrchr.c \
+				./str_ops/ft_strncmp.c \
+				./str_ops/ft_strnstr.c \
+				./str_ops/ft_strdup.c \
+				./str_ops/ft_substr.c \
+				./str_ops/ft_strjoin.c \
+				./str_ops/ft_strtrim.c \
+				./str_ops/ft_split.c \
+				./str_ops/ft_strmapi.c \
+				./str_ops/ft_striteri.c
+
+PRINTF		=	./ft_printf/ft_printf.c \
+				./ft_printf/ft_print_pxX.c \
+				./ft_printf/ft_print_diu.c \
+				./ft_printf/ft_print_cs%.c
+
+GNL			=	./get_next_line/get_next_line.c
+
+OBJ			=	${SRC:.c=.o}
+
+#----------------------------\\\\\___RULES___/////-----------------------------#
+
+all:			${NAME}
 
 %.o: %.c
-			${CC} ${FLAGS} -c $< -o ${<:.c=.o}
+				@${CC} ${FLAGS} -c $< -o ${<:.c=.o}
 
-${NAME}:	${OBJ}
-			ar rcs ${NAME} ${OBJ}
-
-bonus:		${OBJ} ${OBJ_BONUS}
-			ar rcs ${NAME} ${OBJ} ${OBJ_BONUS}
+${NAME}:		${OBJ}
+				@echo "🧠 Compiling libft..."
+				@ar rcs ${NAME} ${OBJ}
+				@echo "✅ 🦾 libft is ready for use!"
 
 clean:
-			rm -f ${OBJ} ${OBJ_BONUS}
+				@rm -f ${OBJ}
 
-fclean:		clean
-			rm -f ${NAME}
+fclean:			clean
+				@echo "🚮 Removing libft..."
+				@rm -f ${NAME}
+				@echo "❌ libft has been removed."
 
-re:			fclean all
+re:				fclean all
 
-.PHONY:		all clean fclean re
+.PHONY:			all clean fclean re
