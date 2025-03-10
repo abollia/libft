@@ -9,7 +9,7 @@ FLAGS		=	-Wall -Wextra -Werror -g3
 
 #---------------------------\\\\\___SOURCES___/////----------------------------#
 
-SRC			=	${IS} ${MEM} ${FD} ${LST} ${STR_OPS} ${TO} ${PRINTF} ${GNL}
+SRC			=	${IS} ${MEM} ${FD} ${LST} ${STR_OPS} ${TO} ${PRINTF} ${GNL} ${DPRINTF}
 
 IS			=	./is/ft_isalpha.c \
 				./is/ft_isdigit.c \
@@ -68,6 +68,11 @@ PRINTF		=	./ft_printf/ft_printf.c \
 				./ft_printf/ft_print_cs%.c
 
 GNL			=	./get_next_line/get_next_line.c
+
+DPRINTF		=	./ft_dprintf/ft_dprintf.c \
+				./ft_dprintf/ft_dprint_cs%.c \
+				./ft_dprintf/ft_dprint_diu.c \
+				./ft_dprintf/ft_dprint_pxX.c
 
 OBJ			=	${SRC:.c=.o}
 

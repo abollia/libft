@@ -6,7 +6,7 @@
 /*   By: abollia <abollia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 16:00:48 by abollia           #+#    #+#             */
-/*   Updated: 2025/02/17 13:35:11 by abollia          ###   ########.fr       */
+/*   Updated: 2025/03/10 12:30:20 by abollia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,7 +103,17 @@ int		ft_printnbru(unsigned int n);
 int		ft_printhex(unsigned long long n, const char format);
 int		ft_printptr(void *p);
 
-/*-----------------------\\\\\___GET_NEXT_LINE___/////-----------------------*/
+/*-------------------------\\\\\___FT_DPRINTF___/////-------------------------*/
+
+int		ft_dprintf(int fd, const char *str, ...);
+int		ft_dprintchar(int fd, int c);
+int		ft_dprintstr(int fd, const char *str);
+int		ft_dprintnbr(int fd, int n);
+int		ft_dprintnbru(int fd, unsigned int n);
+int		ft_dprinthex(int fd, unsigned long long n, const char format);
+int		ft_dprintptr(int fd, void *p);
+
+/*-----------------------\\\\\___GET_NEXT_LINE___/////------------------------*/
 char	*get_next_line(int fd);
 
 #endif
