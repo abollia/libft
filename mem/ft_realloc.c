@@ -6,7 +6,7 @@
 /*   By: abollia <abollia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/13 09:36:43 by abollia           #+#    #+#             */
-/*   Updated: 2025/03/13 09:59:40 by abollia          ###   ########.fr       */
+/*   Updated: 2025/03/13 10:10:34 by abollia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	*ft_realloc(void *ptr, size_t cursize, size_t newsize)
 	newptr = (void *)malloc(newsize);
 	if (!newptr)
 		return (NULL);
-	newptr = ft_memcpy(newptr, ptr, sizetocpy);
+	ft_memcpy(newptr, ptr, sizetocpy);
 	free(ptr);
 	return (newptr);
 }
