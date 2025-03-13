@@ -1,26 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_freetab.c                                       :+:      :+:    :+:   */
+/*   ft_realloc.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abollia <abollia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/12 12:51:18 by abollia           #+#    #+#             */
-/*   Updated: 2025/03/13 10:01:25 by abollia          ###   ########.fr       */
+/*   Created: 2025/03/13 09:36:43 by abollia           #+#    #+#             */
+/*   Updated: 2025/03/13 09:59:40 by abollia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-void	ft_freetab(int **tab, size_t size)
+void	*ft_realloc(void *ptr, size_t cursize, size_t newsize)
 {
-	size_t	i;
+	size_t	sizetocpy;
+	void	*newptr;
 
-	i = 0;
-	while (i < size)
-	{
-		free(tab[i]);
-		i++;
-	}
-	free(tab);
+	if (!newsize)
+		return (free(ptr), NULL);
+	if (!ptr)
+		return ((void *)malloc(newsize));
+	if (newsize <= cursize)
+		sizetocpy = newsize;
+	else
+		sizetocpy = cursize;
+	newptr = (void *)malloc(newsize);
+	if (!newptr)
+		return (NULL);
+	newptr = ft_memcpy(newptr, ptr, sizetocpy);
+	free(ptr);
+	return (newptr);
 }

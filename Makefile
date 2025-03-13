@@ -15,7 +15,8 @@ IS			=	./is/ft_isalpha.c \
 				./is/ft_isdigit.c \
 				./is/ft_isalnum.c \
 				./is/ft_isascii.c \
-				./is/ft_isprint.c 
+				./is/ft_isprint.c \
+				./is/ft_isspace.c
 
 TO			=	./to/ft_toupper.c \
 				./to/ft_tolower.c \
@@ -24,7 +25,9 @@ TO			=	./to/ft_toupper.c \
 				./to/ft_itoa.c 
 
 MEM			=	./mem/ft_calloc.c \
+				./mem/ft_realloc.c \
 				./mem/ft_ffa.c \
+				./mem/ft_freetab.c \
 				./mem/ft_memchr.c \
 				./mem/ft_memcmp.c \
 				./mem/ft_memcpy.c \

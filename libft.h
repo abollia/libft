@@ -6,7 +6,7 @@
 /*   By: abollia <abollia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 16:00:48 by abollia           #+#    #+#             */
-/*   Updated: 2025/03/10 12:30:20 by abollia          ###   ########.fr       */
+/*   Updated: 2025/03/13 10:01:32 by abollia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,10 +48,13 @@ int		ft_isprint(int c);
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
+int		ft_isspace(int c);
 
 /*----------------------\\\\\___MEMORY OPERATIONS___/////---------------------*/
 
+void	*ft_realloc(void *ptr, size_t cursize, size_t newsize);
 void	ft_ffa(char **tab);
+void	ft_freetab(int **tab, size_t size);
 void	*ft_memset(void *s, int c, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
