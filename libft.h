@@ -6,7 +6,7 @@
 /*   By: abollia <abollia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 16:00:48 by abollia           #+#    #+#             */
-/*   Updated: 2025/03/13 10:01:32 by abollia          ###   ########.fr       */
+/*   Updated: 2025/03/19 13:41:08 by abollia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ int		ft_isspace(int c);
 
 /*----------------------\\\\\___MEMORY OPERATIONS___/////---------------------*/
 
+void	*ft_secumalloc(size_t size);
 void	*ft_realloc(void *ptr, size_t cursize, size_t newsize);
 void	ft_ffa(char **tab);
 void	ft_freetab(int **tab, size_t size);

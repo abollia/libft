@@ -33,7 +33,8 @@ MEM			=	./mem/ft_calloc.c \
 				./mem/ft_memcpy.c \
 				./mem/ft_memmove.c \
 				./mem/ft_memset.c \
-				./mem/ft_bzero.c 
+				./mem/ft_bzero.c \
+				./mem/ft_secumalloc.c
 
 FD			=	./fd/ft_putchar_fd.c \
 				./fd/ft_putstr_fd.c \
