@@ -110,6 +110,10 @@ ${NAME}:		${OBJ}
 
 vpath %.c . ${SRC_DIR}
 
+norm:
+				@norminette -R CheckForbiddenSourceHeader | grep "Error" \
+				|| echo "✅ No norm error, directory clean."
+
 clean:
 				@rm -rf ${OBJ_DIR}
 
@@ -120,4 +124,4 @@ fclean:			clean
 
 re:				fclean all
 
-.PHONY:			all clean fclean re
+.PHONY:			all clean fclean re norm
