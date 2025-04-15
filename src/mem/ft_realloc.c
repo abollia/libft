@@ -6,7 +6,7 @@
 /*   By: abollia <abollia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 14:34:38 by abollia           #+#    #+#             */
-/*   Updated: 2025/04/14 15:48:45 by abollia          ###   ########.fr       */
+/*   Updated: 2025/04/15 15:13:50 by abollia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_realloc(void *ptr, size_t newsize)
 {
-	void *new_ptr;
+	void	*new_ptr;
 
 	if (!newsize)
 		return (free(ptr), NULL);

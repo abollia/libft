@@ -6,7 +6,7 @@
 /*   By: abollia <abollia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 13:15:05 by abollia           #+#    #+#             */
-/*   Updated: 2025/04/14 15:50:48 by abollia          ###   ########.fr       */
+/*   Updated: 2025/04/15 15:13:44 by abollia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_secumalloc(size_t size)
 {
-	void *memspace;
+	void	*memspace;
 
 	memspace = malloc(size);
 	if (!memspace)
@@ -22,5 +22,5 @@ void	*ft_secumalloc(size_t size)
 		perror("Error - Malloc failed to allocate memory space");
 		exit(EXIT_FAILURE);
 	}
-	return(memspace);
+	return (memspace);
 }

@@ -6,13 +6,13 @@
 /*   By: abollia <abollia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/12 12:43:49 by abollia           #+#    #+#             */
-/*   Updated: 2025/04/14 15:49:42 by abollia          ###   ########.fr       */
+/*   Updated: 2025/04/15 15:14:01 by abollia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isspace(int c)
+int	ft_isspace(int c)
 {
 	if (('\n' <= c && c <= '\r') || c == ' ')
 		return (1);
