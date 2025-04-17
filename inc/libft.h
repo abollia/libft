@@ -6,7 +6,7 @@
 /*   By: abollia <abollia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 16:00:48 by abollia           #+#    #+#             */
-/*   Updated: 2025/04/14 14:49:53 by abollia          ###   ########.fr       */
+/*   Updated: 2025/04/17 13:33:24 by abollia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 size_t	ft_strlen(const char *s);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
+size_t	ft_wcount(const char *str, int sep);
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
