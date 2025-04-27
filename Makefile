@@ -46,7 +46,8 @@ MEM			=	./src/mem/ft_calloc.c \
 				./src/mem/ft_memmove.c \
 				./src/mem/ft_memset.c \
 				./src/mem/ft_bzero.c \
-				./src/mem/ft_secumalloc.c
+				./src/mem/ft_secumalloc.c \
+				./src/mem/ft_secufree.c
 
 FD			=	./src/fd/ft_putchar_fd.c \
 				./src/fd/ft_putstr_fd.c \
@@ -76,7 +77,6 @@ STR_OPS		=	./src/str_ops/ft_strlen.c \
 				./src/str_ops/ft_strtrim.c \
 				./src/str_ops/ft_split.c \
 				./src/str_ops/ft_strmapi.c \
-				./src/str_ops/ft_wcount.c \
 				./src/str_ops/ft_striteri.c
 
 PRINTF		=	./src/ft_printf/ft_printf.c \
@@ -111,10 +111,6 @@ ${NAME}:		${OBJ}
 
 vpath %.c . ${SRC_DIR}
 
-norm:
-				@norminette -R CheckForbiddenSourceHeader | grep "Error" \
-				|| echo "✅ No norm error, directory clean."
-
 clean:
 				@rm -rf ${OBJ_DIR}
 
@@ -125,4 +121,4 @@ fclean:			clean
 
 re:				fclean all
 
-.PHONY:			all clean fclean re norm
+.PHONY:			all clean fclean re
