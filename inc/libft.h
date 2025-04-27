@@ -6,7 +6,7 @@
 /*   By: abollia <abollia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 16:00:48 by abollia           #+#    #+#             */
-/*   Updated: 2025/04/27 14:09:05 by abollia          ###   ########.fr       */
+/*   Updated: 2025/04/27 16:24:53 by abollia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,8 @@ int		ft_isspace(int c);
 /*
 * FT_SECUFREE
 * free *memspace et le fait pointer sur NULL
-* Attention, dereferencement! Il faut caster memspace en (void **) lors de l'appel
+* Attention! Il faut caster memspace en void ** lors de l'appel,
+* memspace est dereference afin de ne pas le modifier en local.
 */
 void	ft_secufree(void **memspace);
 
