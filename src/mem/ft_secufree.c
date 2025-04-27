@@ -6,13 +6,13 @@
 /*   By: abollia <abollia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/27 12:48:04 by abollia           #+#    #+#             */
-/*   Updated: 2025/04/27 12:48:47 by abollia          ###   ########.fr       */
+/*   Updated: 2025/04/27 12:57:33 by abollia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ms_secufree(void **memspace)
+void	ft_secufree(void **memspace)
 {
 	free(*memspace);
 	*memspace = NULL;
