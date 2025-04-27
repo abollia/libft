@@ -6,7 +6,7 @@
 /*   By: abollia <abollia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 16:00:48 by abollia           #+#    #+#             */
-/*   Updated: 2025/04/27 12:57:29 by abollia          ###   ########.fr       */
+/*   Updated: 2025/04/27 13:50:04 by abollia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,16 @@ int		ft_isspace(int c);
 /*----------------------\\\\\___MEMORY OPERATIONS___/////---------------------*/
 
 void	ft_secufree(void **memspace);
+/*
+* free *memspace et le fait pointer sur NULL
+* Attention, dereferencement! Il faut caster memspace en (void **) lors de l'appel
+*/
+
 void	*ft_secumalloc(size_t size);
+/*
+* Attention, prototype uniquement
+*/
+
 void	*ft_realloc(void *ptr, size_t newsize);
 void	ft_ffa(char **tab);
 void	ft_freetab(int **tab, size_t nmemb);
@@ -111,6 +120,10 @@ int		ft_printptr(void *p);
 /*-------------------------\\\\\___FT_DPRINTF___/////-------------------------*/
 
 int		ft_dprintf(int fd, const char *str, ...);
+/*
+* Comme ft_printf, mais avec precision du fd sur lequel ecrire
+*/
+
 int		ft_dprintchar(int fd, int c);
 int		ft_dprintstr(int fd, const char *str);
 int		ft_dprintnbr(int fd, int n);
