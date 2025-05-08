@@ -6,7 +6,7 @@
 /*   By: abollia <abollia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 16:00:48 by abollia           #+#    #+#             */
-/*   Updated: 2025/04/27 16:24:53 by abollia          ###   ########.fr       */
+/*   Updated: 2025/05/08 15:04:37 by abollia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ void	ft_secufree(void **memspace);
 void	*ft_secumalloc(size_t size);
 
 void	*ft_realloc(void *ptr, size_t newsize);
-void	ft_ffa(char **tab);
+void	ft_ffa(char ***tab);
 void	ft_freetab(int **tab, size_t nmemb);
 void	*ft_memset(void *s, int c, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
