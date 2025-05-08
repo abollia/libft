@@ -6,7 +6,7 @@
 /*   By: abollia <abollia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 10:13:35 by abollia           #+#    #+#             */
-/*   Updated: 2025/05/08 15:40:36 by abollia          ###   ########.fr       */
+/*   Updated: 2025/05/08 15:46:39 by abollia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,13 @@ void	ft_ffa(char ***tab)
 	if (tab && *tab)
 	{
 		i = 0;
-		while (*tab[i])
+		while ((*tab)[i])
 		{
-			free(*tab[i]);
-			*tab[i] = NULL;
+			free((*tab)[i]);
+			(*tab)[i] = NULL;
 			i++;
 		}
-		free(tab);
+		free(*tab);
 		*tab = NULL;
 	}
 }
