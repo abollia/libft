@@ -6,7 +6,7 @@
 /*   By: abollia <abollia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/27 12:48:04 by abollia           #+#    #+#             */
-/*   Updated: 2025/04/27 12:57:33 by abollia          ###   ########.fr       */
+/*   Updated: 2025/05/08 14:51:48 by abollia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 void	ft_secufree(void **memspace)
 {
-	free(*memspace);
-	*memspace = NULL;
+	if (memspace && *memspace)
+	{
+		free(*memspace);
+		*memspace = NULL;
+	}
 }
