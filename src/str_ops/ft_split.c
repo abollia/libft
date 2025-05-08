@@ -6,7 +6,7 @@
 /*   By: abollia <abollia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 16:02:07 by abollia           #+#    #+#             */
-/*   Updated: 2025/04/14 15:50:55 by abollia          ###   ########.fr       */
+/*   Updated: 2025/05/08 15:25:44 by abollia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ static int	ft_subdup(const char *str, char **tab, char sep)
 				wlen++;
 			tab[i] = ft_substr(str, j, wlen);
 			if (!tab[i])
-				return (ft_ffa(tab), 0);
+				return (ft_ffa(&tab), 0);
 			i++;
 			j += wlen;
 		}
