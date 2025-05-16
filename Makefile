@@ -77,7 +77,8 @@ STR_OPS		=	./src/str_ops/ft_strlen.c \
 				./src/str_ops/ft_strtrim.c \
 				./src/str_ops/ft_split.c \
 				./src/str_ops/ft_strmapi.c \
-				./src/str_ops/ft_striteri.c
+				./src/str_ops/ft_striteri.c \
+				./src/str_ops/ft_wcount.c
 
 PRINTF		=	./src/ft_printf/ft_printf.c \
 				./src/ft_printf/ft_print_pxX.c \

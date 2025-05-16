@@ -6,7 +6,7 @@
 /*   By: abollia <abollia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 16:00:48 by abollia           #+#    #+#             */
-/*   Updated: 2025/05/08 15:04:37 by abollia          ###   ########.fr       */
+/*   Updated: 2025/05/16 14:09:55 by abollia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@
 /*---------------------\\\\\___STRING OPERATIONS___/////----------------------*/
 
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
+size_t	ft_wcount(const char *str, int sep);
 size_t	ft_strlen(const char *s);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
