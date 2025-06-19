@@ -6,7 +6,7 @@
 /*   By: abollia <abollia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 16:00:48 by abollia           #+#    #+#             */
-/*   Updated: 2025/06/19 11:36:47 by abollia          ###   ########.fr       */
+/*   Updated: 2025/06/19 11:38:48 by abollia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 char	*ft_strdup(const char *s);
-char	*ft_strndup(const char *s, int n);
+char	*ft_strndup(const char *s, size_t n);
 char	*ft_substr(const char *s, unsigned int start, size_t len);
 char	*ft_strjoin(const char *s1, const char *s2);
 char	*ft_strtrim(const char *s1, const char *set);
