@@ -72,6 +72,7 @@ STR_OPS		=	./src/str_ops/ft_strlen.c \
 				./src/str_ops/ft_strncmp.c \
 				./src/str_ops/ft_strnstr.c \
 				./src/str_ops/ft_strdup.c \
+				./src/str_ops/ft_strndup.c \
 				./src/str_ops/ft_substr.c \
 				./src/str_ops/ft_strjoin.c \
 				./src/str_ops/ft_strtrim.c \
