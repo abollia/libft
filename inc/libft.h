@@ -6,7 +6,7 @@
 /*   By: abollia <abollia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 16:00:48 by abollia           #+#    #+#             */
-/*   Updated: 2025/06/19 11:38:48 by abollia          ###   ########.fr       */
+/*   Updated: 2025/08/31 12:22:05 by abollia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ int		ft_isalnum(int c);
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isspace(int c);
+int		ft_isonlyspace(char *str);
 
 /*----------------------\\\\\___MEMORY OPERATIONS___/////---------------------*/
 

@@ -28,7 +28,8 @@ IS			=	./src/is/ft_isalpha.c \
 				./src/is/ft_isalnum.c \
 				./src/is/ft_isascii.c \
 				./src/is/ft_isprint.c \
-				./src/is/ft_isspace.c
+				./src/is/ft_isspace.c \
+				./src/is/ft_isonlyspace.c
 
 TO			=	./src/to/ft_toupper.c \
 				./src/to/ft_tolower.c \
