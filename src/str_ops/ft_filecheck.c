@@ -6,7 +6,7 @@
 /*   By: abollia <abollia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 13:53:37 by abollia           #+#    #+#             */
-/*   Updated: 2025/10/29 13:55:11 by abollia          ###   ########.fr       */
+/*   Updated: 2025/10/29 17:01:22 by abollia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,13 @@ int	ft_filecheck(char *file, char *ext)
 
 	len = ft_strlen(file);
 	len_ext = ft_strlen(ext);
+
+		
+	ft_printf("ext : %s\n", ext);
+	ft_printf("file : %s\n", file);
+	ft_printf("bidule : %s\n", &file[len - len_ext]);
+	
+
 	if (ft_strncmp(&file[len - len_ext], ext, len_ext))
 		return (1);
 	return (0);
